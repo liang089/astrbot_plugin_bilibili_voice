@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>B站语音下载</title>
+<link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>B站语音下载</h1>
+    <span id="status-badge" class="badge badge-offline">未登录</span>
+  </header>
+
+  <!-- 登录区 -->
+  <section id="login-section" class="card">
+    <h2>登录</h2>
+    <div id="qr-container">
+      <div id="qr-placeholder">加载二维码中...</div>
+      <img id="qr-image" style="display:none" alt="扫码登录"/>
+    </div>
+    <div class="btn-row">
+      <button id="btn-login" class="btn primary">获取二维码</button>
+      <button id="btn-refresh" class="btn">刷新二维码</button>
+      <button id="btn-status" class="btn">检测登录状态</button>
+    </div>
+    <p id="login-msg" class="msg"></p>
+  </section>
+
+  <!-- 搜索区 -->
+  <section id="search-section" class="card">
+    <h2>搜索下载</h2>
+    <div class="search-row">
+      <input id="search-input" type="text" placeholder="输入关键词搜索B站视频"/>
+      <button id="btn-search" class="btn primary">搜索</button>
+    </div>
+    <div id="search-results"></div>
+    <p id="search-msg" class="msg"></p>
+  </section>
+
+  <!-- 下载进度区 -->
+  <section id="download-section" class="card" style="display:none">
+    <h2>下载进度</h2>
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+    <p id="download-msg" class="msg"></p>
+  </section>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

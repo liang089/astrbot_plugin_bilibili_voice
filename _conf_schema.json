@@ -1,0 +1,17 @@
+{
+  "download_dir": {
+    "type": "string",
+    "default": "data/bilibili_voice",
+    "description": "音频下载缓存目录，相对 AstrBot 工作目录或绝对路径。"
+  },
+  "max_duration_seconds": {
+    "type": "int",
+    "default": 900,
+    "description": "允许下载的最长视频时长，默认 900 秒。填 0 表示不限制。"
+  },
+  "search_limit": {
+    "type": "int",
+    "default": 5,
+    "description": "搜索结果数量。"
+  }
+}
