@@ -1,10 +1,10 @@
 name: astrbot_plugin_bilibili_voice
 display_name: B站语音下载
-desc: 通过 Bilibili 扫码登录，搜索视频并下载音频，转换为 MP3 后以 QQ 语音发送。
-version: v2.0.0
+desc: 通过 Bilibili 扫码登录，搜索视频并下载音频，转换为语音发送到 QQ，也可在 WebUI 直接下载音频文件。
+version: v2.1.1
 author: sB123
-repo: ""
+repo: https://github.com/liang089/astrbot_plugin_bilibili_voice
 short_desc: Bilibili 搜索下载转 QQ 语音
 support_platforms:
   - aiocqhttp
-astrbot_version: ">=4.25.1"
+astrbot_version: ">=4.26.0"

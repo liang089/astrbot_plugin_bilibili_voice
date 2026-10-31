@@ -6,12 +6,37 @@
   },
   "max_duration_seconds": {
     "type": "int",
-    "default": 900,
-    "description": "允许下载的最长视频时长，默认 900 秒。填 0 表示不限制。"
+    "default": 1800,
+    "description": "允许下载的最长视频时长，默认 1800 秒。填 0 表示不限制。",
+    "slider": {
+      "min": 0,
+      "max": 7200,
+      "step": 60
+    }
   },
   "search_limit": {
     "type": "int",
     "default": 5,
-    "description": "搜索结果数量。"
+    "description": "搜索结果数量，范围 1-20。",
+    "slider": {
+      "min": 1,
+      "max": 20,
+      "step": 1
+    }
+  },
+  "ffmpeg_path": {
+    "type": "string",
+    "default": "",
+    "description": "ffmpeg 可执行文件或所在目录的路径。留空时自动从 PATH 中查找。"
+  },
+  "proxy": {
+    "type": "string",
+    "default": "",
+    "description": "下载时使用的 HTTP/SOCKS 代理，例如 http://127.0.0.1:7890。留空则直连。"
+  },
+  "send_as_voice": {
+    "type": "bool",
+    "default": true,
+    "description": "下载完成后优先以 QQ 语音发送；失败时自动改为发送音频文件。"
   }
 }
